@@ -1,0 +1,13 @@
+dummy_security_monitor_subproject_deps = \
+
+dummy_security_monitor_hdrs = \
+
+dummy_security_monitor_c_srcs = \
+
+dummy_security_monitor_asm_srcs = \
+  dummy_security_monitor_sbi.S \
+
+dummy_security_monitor_test_srcs =
+
+dummy_security_monitor_install_prog_srcs = \
+  dummy_security_monitor.c \

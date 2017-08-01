@@ -1,0 +1,8 @@
+AC_ARG_ENABLE([logo], AS_HELP_STRING([--disable-logo], [Disable boot logo]))
+AS_IF([test "x$enable_logo" != "xno"], [
+  AC_DEFINE([PK_ENABLE_LOGO],,[Define if the Sanctum logo is to be displayed])
+])
+
+AC_ARG_WITH([sanctum_payload], AS_HELP_STRING([--with-sanctum-payload], [Set ELF payload for sanctum_bootloader]),
+  [AC_SUBST([SANCTUM_BOOTLOADER_PAYLOAD], $with_sanctum_payload, [Kernel/SM payload for sanctum_bootloader])],
+  [AC_SUBST([SANCTUM_BOOTLOADER_PAYLOAD], [dummy_security_monitor], [Kernel/SM payload for sanctum_bootloader])])

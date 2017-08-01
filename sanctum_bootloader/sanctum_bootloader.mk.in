@@ -1,0 +1,22 @@
+sanctum_bootloader_subproject_deps = \
+	util \
+  softfloat \
+  machine \
+  dummy_security_monitor \
+
+sanctum_bootloader_hdrs = \
+  sanctum_bootloader.h \
+
+sanctum_bootloader_c_srcs = \
+  sanctum_kernel_elf.c \
+  sanctum_logo.c \
+
+sanctum_bootloader_asm_srcs = \
+  sanctum_payload.S \
+
+sanctum_payload.o: $(sanctum_bootloader_payload)
+
+sanctum_bootloader_test_srcs =
+
+sanctum_bootloader_install_prog_srcs = \
+  sanctum_bootloader.c \
